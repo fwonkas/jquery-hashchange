@@ -323,7 +323,7 @@
             })
             
             // Load Iframe src if specified, otherwise nothing.
-            .attr( 'src', iframe_src || 'javascript:0' )
+            .attr( 'src', iframe_src || 'javascript:document.write("<script>document.domain=\''+document.domain+'\';<\/script>")' )
             
             // Append Iframe after the end of the body to prevent unnecessary
             // initial page scrolling (yes, this works).
